@@ -12,7 +12,7 @@ const config = {
     messagingSenderId: "334325507439",
     appId: "1:334325507439:web:faf027beedece98c3b749a"
   }
-
+  //tao profile cho user
   export const createUserProfileDocument = async (userAuth, additionalData) => {
     if(!userAuth) return;
 
@@ -20,7 +20,7 @@ const config = {
 
     const snapShot = await userRef.get();
 
-    console.log(snapShot);
+    //console.log(snapShot);
 
     if(!snapShot.exists) {
       const {displayName, email} = userAuth;
@@ -47,8 +47,11 @@ const config = {
 
   export const firestore = firebase.firestore();
 
+  //chuc nang dang nhap bang google
   const provider = new firebase.auth.GoogleAuthProvider();
+
   provider.setCustomParameters({prompt: 'select_account'});
+  
   export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
   export default firebase;

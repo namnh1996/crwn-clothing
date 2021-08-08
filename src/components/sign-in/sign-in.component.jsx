@@ -16,25 +16,27 @@ class SignIn extends React.Component {
     }
 
     handleSubmit = async event => {
+        //huy bo event de no khong lan toi event cua phan khac
         event.preventDefault();
 
         const {email, password} = this.state;
 
         try {
+            //dang nhap bang email va password
             await auth.signInWithEmailAndPassword(email, password);
             this.setState({ email:'', password: ''})
 
         } catch (error) {
             console.log(error);
         }
-
     }
 
     handleChange = (event) => {
 
         const { value, name } = event.target;
 
-        this.setState({[name]: value})
+        //dua gia tri vao state - cach rat hay
+        this.setState({[name]: value});
     }
 
     render() {
