@@ -10,9 +10,9 @@ import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
 const HatsPage = () => (
   <div>
-      <h1>HATS PAGE</h1>
+      <h1>HATS PAGE IS BUILDING...</h1>
   </div>
-)
+);
 
 class App extends React.Component {
   // constructor(){
