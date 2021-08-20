@@ -13,9 +13,9 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 import CheckoutPage from './pages/checkout/checkout.component';
 
 
-const HatsPage = () => (
+const Contact = () => (
   <div>
-      <h1>HATS PAGE IS BUILDING...</h1>
+      <h1> CONTACT PAGE IS BUILDING...</h1>
   </div>
 );
 
@@ -54,7 +54,7 @@ class App extends React.Component {
           <Switch>
             <Route  exact path='/' component={HomePage} />
             <Route  path='/shop' component={ShopPage} />
-            <Route  path='/shop/hats' component={HatsPage} />
+            <Route  path='/contact' component={Contact} />
             <Route  exact path='/checkout' component={CheckoutPage} />
             <Route  exact path='/signin' render={() => 
               this.props.currentUser
