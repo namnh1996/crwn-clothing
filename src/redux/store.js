@@ -11,7 +11,12 @@ import rootReducer from './root-reducer';
 
 
 // keep  in  mind  this  configuration  can  be  viewed  on  redux  doc
-const middlewares = [logger];
+const middlewares = [];
+
+// removing redux-loger from production build
+if(process.env.NODE_ENV === 'development') {
+    middlewares.push(logger);
+}
 
 export const store = createStore(
     rootReducer, 
