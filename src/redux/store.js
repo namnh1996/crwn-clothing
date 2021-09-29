@@ -9,9 +9,11 @@ import logger from "redux-logger";
 
 import rootReducer from './root-reducer';
 
+import thunk from 'redux-thunk';
+
 
 // keep  in  mind  this  configuration  can  be  viewed  on  redux  doc
-const middlewares = [];
+const middlewares = [thunk];
 
 // removing redux-loger from production build
 if(process.env.NODE_ENV === 'development') {

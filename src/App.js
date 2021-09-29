@@ -1,4 +1,3 @@
-import "./App.css";
 import HomePage from "./pages/homepage/homepage.component";
 import { Switch, Route, Redirect } from "react-router-dom";
 import ShopPage from "./pages/shop/shop.component";
@@ -17,6 +16,7 @@ import { selectCurrentUser } from "./redux/user/user.selectors";
 
 import { selectCollectionForPreview } from "./redux/shop/shop.selectors";
 
+import GlobalStyles from "./global.styless";
 import CheckoutPage from "./pages/checkout/checkout.component";
 
 const Contact = () => (
@@ -57,6 +57,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <GlobalStyles />
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
